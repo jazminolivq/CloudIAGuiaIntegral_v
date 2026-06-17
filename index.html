@@ -45,7 +45,7 @@
     }
   </style>
 
-  <!-- ✅ Script Genesys -->
+  <!-- ✅ SCRIPT GENESYS -->
   <script type="text/javascript" charset="utf-8">
     (function (g, e, n, es, ys) {
       g['_genesysJs'] = e;
@@ -62,6 +62,17 @@
     })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
       environment: 'prod',
       deploymentId: '9dd7b41c-7ed4-49ed-bacd-625968d89006'
+    });
+  </script>
+
+  <!-- ✅ OPEN AUTOMÁTICO -->
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        if (window.Genesys) {
+          Genesys("command", "Messenger.open");
+        }
+      }, 4000); // espera a que cargue bien
     });
   </script>
 
