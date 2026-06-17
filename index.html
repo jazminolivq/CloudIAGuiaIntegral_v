@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Dashboard Colas Genesys</title>
+<title>Dashboard Colas + Genesys</title>
 
 <style>
   body {
@@ -31,7 +31,6 @@
     background: #c7b299;
     color: #000;
     padding: 10px;
-    text-align: left;
   }
 
   td {
@@ -48,10 +47,29 @@
   .metric {
     text-align: center;
     background: #dfe3e8;
-    border-left: 1px solid #ccc;
   }
-
 </style>
+
+<!-- ✅ SCRIPT GENESYS (Messenger) -->
+<script type="text/javascript" charset="utf-8">
+(function (g, e, n, es, ys) {
+  g['_genesysJs'] = e;
+  g[e] = g[e] || function () {
+    (g[e].q = g[e].q || []).push(arguments)
+  };
+  g[e].t = 1 * new Date();
+  g[e].c = es;
+  ys = document.createElement('script');
+  ys.async = 1;
+  ys.src = n;
+  ys.charset = 'utf-8';
+  document.head.appendChild(ys);
+})(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+  environment: 'prod',
+  deploymentId: '2a7666aa-5de1-4a0d-83fe-4c24e29b617f'
+});
+</script>
+
 </head>
 
 <body>
@@ -64,8 +82,8 @@
       <th>Cola</th>
       <th>Nombre Técnico</th>
       <th>En Espera</th>
-      <th>Agentes Activos</th>
-      <th>TMO (seg)</th>
+      <th>Agentes</th>
+      <th>TMO</th>
     </tr>
 
     <tr>
@@ -77,35 +95,11 @@
     </tr>
 
     <tr>
-      <td class="name">BANCA SEGUROS RETENCIONES</td>
-      <td>Q_INBOUND_GE_SEGUROSRETENCIONES</td>
-      <td class="metric">5</td>
-      <td class="metric">6</td>
-      <td class="metric">280</td>
-    </tr>
-
-    <tr>
       <td class="name">ONR</td>
       <td>Q_INBOUND_GE_ONR911</td>
       <td class="metric">2</td>
       <td class="metric">4</td>
       <td class="metric">150</td>
-    </tr>
-
-    <tr>
-      <td class="name">AUTORIZACIONES</td>
-      <td>Q_INBOUND_GE_AUTORIZACIONES</td>
-      <td class="metric">9</td>
-      <td class="metric">7</td>
-      <td class="metric">210</td>
-    </tr>
-
-    <tr>
-      <td class="name">OPERACIONES TRUNCAS ATM</td>
-      <td>Q_INBOUND_GE_OT305</td>
-      <td class="metric">3</td>
-      <td class="metric">5</td>
-      <td class="metric">180</td>
     </tr>
 
   </table>
