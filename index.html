@@ -1,121 +1,64 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Genesys Web</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: #f4f6f8;
-      font-family: Arial, sans-serif;
-    }
+<title>Genesys Web</title>
 
-    .container {
-      padding: 20px;
-    }
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-family:Arial,sans-serif;
+    background:#f4f6f8;
+}
 
-    h1 {
-      margin-bottom: 15px;
-    }
+.container{
+    padding:20px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+h1{
+    margin-bottom:15px;
+}
 
-    th {
-      background: #c7b299;
-      padding: 10px;
-      text-align: left;
-    }
+.btn-consulta{
+    background:#ffcf59;
+    border:none;
+    padding:12px 24px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
 
-    td {
-      background: #9aa3ad;
-      padding: 10px;
-      border-bottom: 2px dotted #5f6b78;
-    }
+.btn-consulta:hover{
+    background:#f5c63f;
+}
 
-    td.name {
-      font-weight: bold;
-    }
-  </style>
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
-  <!-- ✅ SCRIPT GENESYS -->
-  <script type="text/javascript" charset="utf-8">
-    (function (g, e, n, es, ys) {
-      g['_genesysJs'] = e;
-      g[e] = g[e] || function () {
-        (g[e].q = g[e].q || []).push(arguments);
-      };
-      g[e].t = 1 * new Date();
-      g[e].c = es;
-      ys = document.createElement('script');
-      ys.async = 1;
-      ys.src = n;
-      ys.charset = 'utf-8';
-      document.head.appendChild(ys);
-    })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
-      environment: 'prod',
-      deploymentId: '9dd7b41c-7ed4-49ed-bacd-625968d89006'
-    });
-  </script>
+th{
+    background:#c7b299;
+    padding:10px;
+    text-align:left;
+}
 
-  <!-- ✅ OPEN AUTOMÁTICO -->
-  <script>
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        if (window.Genesys) {
-          Genesys("command", "Messenger.open");
-        }
-      }, 4000); // espera a que cargue bien
-    });
-  </script>
+td{
+    background:#9aa3ad;
+    padding:10px;
+    border-bottom:2px dotted #5f6b78;
+}
 
-</head>
+.name{
+    font-weight:bold;
+}
+</style>
 
-<body>
-
-<div class="container">
-  <h1>Monitoreo de Colas</h1>
-
-  <table>
-    <tr>
-      <th>Cola</th>
-      <th>Nombre Técnico</th>
-    </tr>
-
-    <tr>
-      <td class="name">BANCA SEGUROS</td>
-      <td>Q_INBOUND_GE_SEGUROS</td>
-    </tr>
-
-    <tr>
-      <td class="name">BANCA SEGUROS RETENCIONES</td>
-      <td>Q_INBOUND_GE_SEGUROSRETENCIONES</td>
-    </tr>
-
-    <tr>
-      <td class="name">ONR</td>
-      <td>Q_INBOUND_GE_ONR911</td>
-    </tr>
-
-    <tr>
-      <td class="name">AUTORIZACIONES</td>
-      <td>Q_INBOUND_GE_AUTORIZACIONES</td>
-    </tr>
-
-    <tr>
-      <td class="name">OPERACIONES TRUNCAS ATM</td>
-      <td>Q_INBOUND_GE_OT305</td>
-    </tr>
-
-  </table>
-</div>
-
-</body>
-</html>
+<!-- 
